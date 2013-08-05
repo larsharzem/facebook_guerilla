@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>MyChatHistory</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+		
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<!-- These are Open Graph tags.  They add meta data to your  -->
+	<!-- site that facebook uses when your content is shared     -->
+	<!-- over facebook.  You should fill these tags in with      -->
+	<!-- your data.  To learn more about Open Graph, visit       -->
+	<!-- 'https://developers.facebook.com/docs/opengraph/'       -->
+	<meta property="og:title" content="MyChatHistory" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<%= request.env['HTTP_HOST'] %>" />
+	<meta property="og:image" content="<%= request.env['HTTP_HOST'] %>" />
+	<meta property="og:site_name" content="MyChatHistory" />
+	<meta property="og:description" content="MyChatHistory" />
+	<meta property="fb:app_id" content="320250034746634" />
+</head>
+<body>
+	<div id="icon"><img src="icon_128x128.jpg" /></div>
+	
+	<div id="notice"></div>
+	
+	<div id="fb-root"></div>
+
+	<%= yield %>
+
+</body>
+</html>
